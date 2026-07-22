@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HieuDev | Trần Bá Hiếu</title>
+  <meta name="description" content="Website cá nhân của Trần Bá Hiếu - Student & Developer">
+  <meta name="theme-color" content="#0a84ff">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%234ea3ff%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%238a7dff%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20rx%3D%2218%22%20ry%3D%2218%22%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22url%28%23g%29%22/%3E%0A%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2218%22%20fill%3D%22rgba%28255%2C255%2C255%2C0.12%29%22/%3E%0A%20%20%3Cpath%20d%3D%22M32%2014l4.2%2010.8L47%2029l-10.8%204.2L32%2044l-4.2-10.8L17%2029l10.8-4.2L32%2014z%22%20fill%3D%22%23fff%22/%3E%0A%20%20%3Cpath%20d%3D%22M24%2048h16%22%20stroke%3D%22%23fff%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22/%3E%0A%3C/svg%3E">
+  <link rel="preload" href="background.mp4" as="video" type="video/mp4">
+  <link rel="preload" href="avatar.jpg" as="image">
+  <link rel="preload" href="qr-bank.jpg" as="image">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+
+
+  <svg class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-spark" viewBox="0 0 24 24">
+      <path d="M12 2l1.8 5.2L19 9l-5.2 1.8L12 16l-1.8-5.2L5 9l5.2-1.8L12 2z" fill="currentColor"/>
+      <path d="M6 13l1 2.9L10 17l-2.9 1L6 21l-1-3-3-1 3-1 1-3z" fill="currentColor" opacity=".78"/>
+    </symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24">
+      <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-sun" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="2" fill="none"/>
+      <path d="M12 2.5v2.8M12 18.7v2.8M4.8 4.8l2 2M17.2 17.2l2 2M2.5 12h2.8M18.7 12h2.8M4.8 19.2l2-2M17.2 6.8l2-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-moon" viewBox="0 0 24 24">
+      <path d="M15.8 3.8a8.7 8.7 0 1 0 4.4 13.8A9.4 9.4 0 0 1 15.8 3.8Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="icon-play" viewBox="0 0 24 24">
+      <path d="M8 5.5v13l11-6.5-11-6.5Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="icon-pause" viewBox="0 0 24 24">
+      <path d="M7 6h3v12H7zM14 6h3v12h-3z" fill="currentColor"/>
+    </symbol>
+    <symbol id="icon-loop" viewBox="0 0 24 24">
+      <path d="M4 7h11a5 5 0 0 1 5 5v1" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <path d="M17 6l3 3-3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M20 17H9a5 5 0 0 1-5-5v-1" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <path d="M7 18l-3-3 3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
+    <symbol id="icon-volume" viewBox="0 0 24 24">
+      <path d="M5 9v6h4l5 4V5L9 9H5Z" fill="currentColor"/>
+      <path d="M17 8a4.5 4.5 0 0 1 0 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <path d="M19.5 5.5a8 8 0 0 1 0 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" opacity=".75"/>
+    </symbol>
+    <symbol id="icon-volume-x" viewBox="0 0 24 24">
+      <path d="M5 9v6h4l5 4V5L9 9H5Z" fill="currentColor"/>
+      <path d="M16.5 9.5l4 4M20.5 9.5l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-copy" viewBox="0 0 24 24">
+      <path d="M9 9V6.8A1.8 1.8 0 0 1 10.8 5h6.4A1.8 1.8 0 0 1 19 6.8v6.4A1.8 1.8 0 0 1 17.2 15H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <rect x="5" y="9" width="10" height="10" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+    </symbol>
+    <symbol id="icon-arrow-up" viewBox="0 0 24 24">
+      <path d="M12 19V6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M7.5 10.5 12 6l4.5 4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24">
+      <path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-left" viewBox="0 0 24 24">
+      <path d="M14.5 5.5 8 12l6.5 6.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
+    <symbol id="icon-right" viewBox="0 0 24 24">
+      <path d="M9.5 5.5 16 12l-6.5 6.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
+
+    <symbol id="icon-facebook" viewBox="0 0 24 24">
+      <text x="12" y="16.5" text-anchor="middle" font-size="15" font-weight="700" fill="currentColor" font-family="Arial, Helvetica, sans-serif">f</text>
+    </symbol>
+    <symbol id="icon-tiktok" viewBox="0 0 24 24">
+      <text x="12" y="16.5" text-anchor="middle" font-size="14" font-weight="700" fill="currentColor" font-family="Arial, Helvetica, sans-serif">♫</text>
+    </symbol>
+    <symbol id="icon-telegram" viewBox="0 0 24 24">
+      <path d="M21.5 4.5 3.8 11.4c-.8.3-.8 1.4.1 1.7l4.3 1.3 1.7 5.2c.3.8 1.4 1 1.9.2l2.7-4.1 4.7 3.5c.7.5 1.7.1 1.9-.7L23 5.9c.3-1.1-.7-1.9-1.5-1.4ZM9.8 13.4l8.2-5.1-6.8 6.9-.3 3-1.1-3-2.9-.8 2.9-1Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24">
+      <rect x="5" y="5" width="14" height="14" rx="4" stroke="currentColor" stroke-width="2" fill="none"/>
+      <circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="2" fill="none"/>
+      <circle cx="16.7" cy="7.3" r="1.1" fill="currentColor"/>
+    </symbol>
+
+  </svg>
+
+
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader-ring"></div>
+    <div class="loader-text">
+      <span>HieuDev</span>
+      <small>Loading portfolio...</small>
+    </div>
+  </div>
+
+  <video class="bg-video" autoplay muted loop playsinline poster="avatar.jpg">
+    <source src="background.mp4" type="video/mp4">
+  </video>
+  <div class="bg-overlay"></div>
+  <div class="aurora aurora-1"></div>
+  <div class="aurora aurora-2"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="HieuDev Home">
+      <span class="brand-mark"><svg class="ui-icon" aria-hidden="true"><use href="#icon-spark"></use></svg></span>
+      <span class="brand-text">HieuDev</span>
+    </a>
+
+    <button class="icon-button menu-button" id="menuButton" aria-label="Mở menu" aria-expanded="false" aria-controls="siteNav">
+      <svg class="ui-icon" aria-hidden="true"><use href="#icon-menu"></use></svg>
+    </button>
+
+    <nav class="site-nav" id="siteNav" aria-label="Điều hướng chính">
+      <a href="#home">Trang chủ</a>
+      <a href="#about">Giới thiệu</a>
+      <a href="#gallery">Album</a>
+      <a href="#music">Music</a>
+      <a href="#donate">Donate</a>
+      <a href="#contact">Liên hệ</a>
+    </nav>
+
+    <button class="icon-button theme-button" id="themeButton" aria-label="Đổi giao diện" aria-pressed="false">
+      <svg class="ui-icon icon-light" aria-hidden="true"><use href="#icon-sun"></use></svg>
+      <svg class="ui-icon icon-dark" aria-hidden="true"><use href="#icon-moon"></use></svg>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-card glass reveal">
+        <div class="avatar-wrap">
+          <div class="avatar-glow"></div>
+          <img class="avatar" src="avatar.jpg" alt="Avatar của Trần Bá Hiếu">
+        </div>
+
+        <p class="eyebrow">Student & Developer</p>
+        <h1>Trần Bá Hiếu</h1>
+        <p class="hero-desc">Yêu thích lập trình và thiết kế website.</p>
+
+        <div class="hero-actions">
+          <a class="primary-btn" href="#gallery">Xem album</a>
+          <a class="secondary-btn" href="#donate">Ủng hộ</a>
+        </div>
+
+        <div class="social-grid" aria-label="Mạng xã hội">
+          <a class="social-pill" data-social="facebook" href="#" target="_blank" rel="noopener noreferrer">
+            <span class="social-icon"><svg class="ui-icon" aria-hidden="true"><use href="#icon-facebook"></use></svg></span><span>Facebook</span>
+          </a>
+          <a class="social-pill" data-social="tiktok" href="#" target="_blank" rel="noopener noreferrer">
+            <span class="social-icon"><svg class="ui-icon" aria-hidden="true"><use href="#icon-tiktok"></use></svg></span><span>TikTok</span>
+          </a>
+          <a class="social-pill" data-social="telegram" href="#" target="_blank" rel="noopener noreferrer">
+            <span class="social-icon"><svg class="ui-icon" aria-hidden="true"><use href="#icon-telegram"></use></svg></span><span>Telegram</span>
+          </a>
+          <a class="social-pill" data-social="instagram" href="#" target="_blank" rel="noopener noreferrer">
+            <span class="social-icon"><svg class="ui-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg></span><span>Instagram</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section section-tight">
+      <div class="section-head reveal">
+        <p class="section-kicker">Giới thiệu</p>
+        <h2>Vài nét về mình</h2>
+      </div>
+
+      <div class="about-grid">
+        <article class="card glass reveal">
+          <h3>Xin chào 👋</h3>
+          <p>Mình là <strong>Trần Bá Hiếu</strong>, hiện là <strong>Student & Developer</strong>.</p>
+          <p>Mình yêu thích lập trình, thiết kế website và luôn thích làm những thứ đẹp, gọn và dễ dùng.</p>
+        </article>
+
+        <article class="card glass reveal">
+          <h3>Thông tin</h3>
+          <ul class="info-list">
+            <li><span>🎓</span><span>Student</span></li>
+            <li><span>💻</span><span>Developer</span></li>
+            <li><span>📍</span><span>Việt Nam</span></li>
+            <li><span>🎧</span><span>Music Lover</span></li>
+          </ul>
+        </article>
+
+        <article class="card glass reveal">
+          <h3>Điểm nổi bật</h3>
+          <div class="stats-grid">
+            <div class="stat">
+              <strong>3</strong>
+              <span>Album ảnh</span>
+            </div>
+            <div class="stat">
+              <strong>1</strong>
+              <span>Bài nhạc</span>
+            </div>
+            <div class="stat">
+              <strong>4</strong>
+              <span>Mạng xã hội</span>
+            </div>
+            <div class="stat">
+              <strong>∞</strong>
+              <span>Sáng tạo</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <div class="section-head reveal">
+        <p class="section-kicker">Album</p>
+        <h2>Ảnh trong bộ sưu tập</h2>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid" aria-live="polite"></div>
+    </section>
+
+    <section id="music" class="section section-tight">
+      <div class="section-head reveal">
+        <p class="section-kicker">Music</p>
+        <h2>Trình phát nhạc</h2>
+      </div>
+
+      <div class="music-shell glass reveal">
+        <div class="music-cover-wrap">
+          <img id="musicCover" class="music-cover" src="avatar.jpg" alt="Bìa nhạc">
+          <span class="music-badge">Now Playing</span>
+        </div>
+
+        <div class="music-meta">
+          <h3 id="trackTitle">China Pipa x Gong Xi Thazh</h3>
+          <p id="trackArtist">Trần Bá Hiếu</p>
+        </div>
+
+        <audio id="audio" preload="metadata" src="music.mp3"></audio>
+
+        <div class="music-progress">
+          <div class="time-row">
+            <span id="currentTime">00:00</span>
+            <span id="duration">00:00</span>
+          </div>
+          <input id="progress" type="range" min="0" max="100" value="0" aria-label="Thanh tiến trình">
+        </div>
+
+        <div class="music-controls">
+          <button id="playBtn" class="circle-btn" aria-label="Phát hoặc tạm dừng">
+            <svg class="ui-icon icon-play-state icon-play" aria-hidden="true"><use href="#icon-play"></use></svg>
+            <svg class="ui-icon icon-play-state icon-pause" aria-hidden="true"><use href="#icon-pause"></use></svg>
+          </button>
+          <button id="loopBtn" class="pill-btn" aria-pressed="false" aria-label="Lặp lại">
+            <svg class="ui-icon" aria-hidden="true"><use href="#icon-loop"></use></svg><span>Lặp</span>
+          </button>
+          <button id="muteBtn" class="pill-btn" aria-pressed="false" aria-label="Tắt tiếng">
+            <svg class="ui-icon icon-vol icon-volume" aria-hidden="true"><use href="#icon-volume"></use></svg>
+            <svg class="ui-icon icon-vol icon-mute" aria-hidden="true"><use href="#icon-volume-x"></use></svg>
+            <span>Âm</span>
+          </button>
+        </div>
+
+        <div class="volume-row">
+          <span>🔉</span>
+          <input id="volume" type="range" min="0" max="1" step="0.01" value="0.8" aria-label="Âm lượng">
+        </div>
+      </div>
+    </section>
+
+    <section id="donate" class="section">
+      <div class="section-head reveal">
+        <p class="section-kicker">Donate</p>
+        <h2>Ủng hộ mình</h2>
+      </div>
+
+      <div class="donate-card glass reveal">
+        <div class="donate-qr">
+          <img src="qr-bank.jpg" alt="QR MB Bank">
+        </div>
+        <div class="donate-info">
+          <p class="bank-name">MB Bank</p>
+          <h3 id="bankOwner">TRAN BA HIEU</h3>
+          <p class="muted">Số tài khoản</p>
+          <div class="account-row">
+            <code id="accountNumber">123456789990</code>
+            <button class="copy-btn" id="copyAccount">
+            <svg class="ui-icon" aria-hidden="true"><use href="#icon-copy"></use></svg>
+            <span>Copy</span>
+          </button>
+          </div>
+          <p class="muted">Nội dung chuyển khoản: <strong>HieuDev</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-tight">
+      <div class="section-head reveal">
+        <p class="section-kicker">Liên hệ</p>
+        <h2>Kết nối với mình</h2>
+      </div>
+
+      <div class="contact-grid">
+        <a class="contact-card glass reveal" data-social="facebook" href="#" target="_blank" rel="noopener noreferrer">
+          <span><svg class="ui-icon" aria-hidden="true"><use href="#icon-facebook"></use></svg></span>
+          <strong>Facebook</strong>
+          <small>Kết nối nhanh</small>
+        </a>
+        <a class="contact-card glass reveal" data-social="tiktok" href="#" target="_blank" rel="noopener noreferrer">
+          <span><svg class="ui-icon" aria-hidden="true"><use href="#icon-tiktok"></use></svg></span>
+          <strong>TikTok</strong>
+          <small>Xem hoạt động</small>
+        </a>
+        <a class="contact-card glass reveal" data-social="telegram" href="#" target="_blank" rel="noopener noreferrer">
+          <span><svg class="ui-icon" aria-hidden="true"><use href="#icon-telegram"></use></svg></span>
+          <strong>Telegram</strong>
+          <small>Nhắn tin trực tiếp</small>
+        </a>
+        <a class="contact-card glass reveal" data-social="instagram" href="#" target="_blank" rel="noopener noreferrer">
+          <span><svg class="ui-icon" aria-hidden="true"><use href="#icon-instagram"></use></svg></span>
+          <strong>Instagram</strong>
+          <small>Khoảnh khắc</small>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> HieuDev</p>
+    <p>Made with ❤️ by Trần Bá Hiếu</p>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Lên đầu trang">
+    <svg class="ui-icon" aria-hidden="true"><use href="#icon-arrow-up"></use></svg>
+  </button>
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Đóng ảnh">
+    <svg class="ui-icon" aria-hidden="true"><use href="#icon-close"></use></svg>
+  </button>
+    <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Ảnh trước">
+      <svg class="ui-icon" aria-hidden="true"><use href="#icon-left"></use></svg>
+    </button>
+    <figure class="lightbox-frame">
+      <img id="lightboxImage" alt="">
+      <figcaption id="lightboxCaption"></figcaption>
+      <span id="lightboxCounter" class="lightbox-counter"></span>
+    </figure>
+    <button class="lightbox-nav next" id="lightboxNext" aria-label="Ảnh sau">
+      <svg class="ui-icon" aria-hidden="true"><use href="#icon-right"></use></svg>
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
